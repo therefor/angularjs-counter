@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>AngularJs运动计时器</title>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <!-- base url -->
+    <!--base href="/"-->
+</head>
+
+<body>
+
+<div ng-app="tinyClock" >
+    <div ng-controller="controller">
+        <h1 class = "title">Exercise Now!</h1>
+        <div class = "controlBoard">
+            <div class = "break" >
+                <p class = "classify">Break Length</p>
+                <button ng-click = "break(-1)"class = "buttonActive">-</button>
+                <span class = "timeLength">{{breakTime}}</span>
+                <button ng-click = "break(1)"class = "buttonActive">+</button>
+            </div>
+            <div class = "session" >
+                <p class = "classify">Session Length</p>
+                <button ng-click = "session(-1)"class = "buttonActive">-</button>
+                <span class = "timeLength">{{sessionTime}}</span>
+                <button ng-click = "session(1)"class = "buttonActive">+</button>
+            </div>
+        </div>
+        <div class = "clock" ng-click = "pauseOrStart()" ng-style = "{ 'border': borderColor }">
+            <p class = "sessionName">{{sessionName}}</p>
+            <p class = "time">{{timeLeft}}</p>
+            <span class = "fill" ng-style = "{ 'height':fillHeight, 'background':fillColor }"></span>
+        </div>
+
+    </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script src="main.js"></script>
+<link href='https://fonts.googleapis.com/css?family=Pacifico|Open+Sans:300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="main.css">
+</body>
+</html>

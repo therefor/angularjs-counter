@@ -1,0 +1,68 @@
+/*@import url(https://fonts.googleapis.com/css?family=Pacifico|Open+Sans:300);*/
+* {
+    font-family: Open Sans, Arial;
+    color: white;
+    text-align: center;
+}
+
+body {
+    background-color: #293d3d;
+}
+
+.controlBoard {
+    display: flex;
+    justify-content: center;
+}
+.controlBoard .break, .controlBoard .session {
+    margin: auto 20px;
+}
+.controlBoard .break button, .controlBoard .session button {
+    font-size: 25px;
+    background-color: #293d3d;
+    border: none;
+    text-decoration: none;
+    cursor: pointer;
+    outline: none;
+}
+.controlBoard .break button:active, .controlBoard .session button:active {
+    transform: translate(0px, 2px);
+}
+
+.clock {
+    cursor: pointer;
+    margin: 20px auto;
+    width: 280px;
+    height: 280px;
+    border-radius: 100%;
+    position: relative;
+    overflow: hidden;
+}
+.clock .time {
+    padding: auto auto;
+    z-index: 20;
+    font-size: 25px;
+}
+.clock .time:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: 50%;
+    z-index: 2;
+    border: 4px solid #293d3d;
+}
+.clock .sessionName {
+    line-height: 140px;
+    font-size: 20px;
+}
+.clock .fill {
+    content: '';
+    position: absolute;
+    background: green;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: -1;
+}
